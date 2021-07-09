@@ -3,14 +3,31 @@ package com.bredgelabz; //creating package
 import java.util.*;
 
 public class TicTacToe {
+	@SuppressWarnings("unused")
+	private static char[] boardArray;
+	private static int[] boardArrayIndex = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+	
+	// Returns the board in the form of a 1D array
 	private static char[] Board() {
-		char[] boardArray = new char[11];
-		for(char c : boardArray) {
-			c = ' ';
+		char[] dummyBoardArray = new char[10];
+		for (int i = 0; i < dummyBoardArray.length; i++) {
+			dummyBoardArray[i] = '$';
 		}
-		return boardArray;
+		return dummyBoardArray;
 	}
 	
+	// boardArrayIndex array
+		@SuppressWarnings("unused")
+		private static boolean IsEmpty(int index) {
+			if (boardArrayIndex[index] == 0) {
+				return true;
+			} else {
+				return false;
+			}
+		}
+			// Allows the user to input 'X' or 'O'
+		
+		
 private static void ChooseLetter() {
 	
 	char firstCharacterInput = ' ';
